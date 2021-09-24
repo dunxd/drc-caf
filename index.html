@@ -913,7 +913,7 @@
     function initMap() {
       // The map, centered on location set at top of page code
         map = new google.maps.Map(document.getElementById("site-finder-map"), {
-        zoom: 6,
+        zoom: map_init_zoom_level,
         center: map_center,
         mapTypeId: 'hybrid'
       });
