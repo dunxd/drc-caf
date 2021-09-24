@@ -14,7 +14,7 @@
 
     // set the coordinates of a default center for the map
     const map_center = { lat: 0, lng: 0};
-    const map_init_zoom_level = 2;
+    const map_init_zoom_level = 5;
 
     // set up presets using URL parameters
     let searchParams = new URLSearchParams(window.location.search);
@@ -913,7 +913,7 @@
     function initMap() {
       // The map, centered on location set at top of page code
         map = new google.maps.Map(document.getElementById("site-finder-map"), {
-        zoom: map_init_zoom_level,
+        zoom: 6,
         center: map_center,
         mapTypeId: 'hybrid'
       });
@@ -948,7 +948,7 @@
               infoWindow.setContent("Approxiate location found - click map to drop pin at actual location");
               infoWindow.open(map);
               map.setCenter(pos);
-              map.setZoom(4)
+              map.setZoom(11)
             },
             () => {
               handleLocationError(true, infoWindow, map.getCenter());
